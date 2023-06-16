@@ -1,0 +1,35 @@
+# Chapter 3: Collections
+
+In jQuery collections are formed when a selector target multiples elements. For example, `$('p')` would create a collection with all the paragraphs in a page. 
+
+### How to access collections elements
+
+There are multiples ways to access collection's elements. Collections are like js arrays, so you can use index to do it. There are methods for this as well, like the `.get()`.
+
+An importa note on theses optios is that they return DOM objects, not jQuery elements. 
+
+```js
+var imgElement = $('img[alt]')[0];
+var imgElement2 = $('p').get(0)
+```
+In case you need a jQuery object and not a normal DOM element, you have two basic options:
+
+```js
+// First (Not elegant)
+$($('p')[0])
+
+//Second (better)
+$('p').eq(0)
+$('p:peq(0)')
+```
+
+**Some interesting methods**
+
+```js
+
+$('p').fist()
+$('p:fist')
+
+$('p').last()
+$('p:last')
+```
